@@ -1,0 +1,28 @@
+{ 
+  "compilerOptions": { 
+    "target": "ESNext", 
+    "emitDecoratorMetadata": true, 
+    "experimentalDecorators": true, 
+    "module": "esnext", 
+    "lib": ["es2017", "dom"], // Add necessary libraries 
+    "strict": true, 
+    "noEmit": true, 
+    "useUnknownInCatchVariables": false, 
+    "forceConsistentCasingInFileNames": true, 
+    "moduleResolution": "node", 
+    "resolveJsonModule": true, 
+    "skipLibCheck": true, 
+    "esModuleInterop": true, 
+    "baseUrl": ".", 
+    "paths": { 
+      "@pages/*": ["pages/*"], 
+      "@util/*": ["util/*"], 
+      "@fixtures/*": ["fixtures/*"], 
+      "@data/*": ["testdata/*"], 
+      "@env/*": ["environmentSettings/*"] 
+    } 
+  }, 
+   "include": ["**/*.ts", "**/*.feature"], 
+   "exclude": ["node_modules"] 
+}
+ 

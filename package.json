@@ -1,0 +1,25 @@
+{
+  "name": "glasshouse-webtests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx bddgen && npx playwright test --headed",
+    "test:debug": "npx bddgen && npx playwright test --headed --debug"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@azure/service-bus": "^7.9.5",
+    "@playwright/test": "^1.49.0",
+    "dotenv": "^16.4.5",
+    "playwright": "^1.49.0",
+    "test": "^3.3.0",
+    "ts-node": "latest",
+    "typescript": "latest"
+  },
+  "devDependencies": {
+    "playwright-bdd": "^7.5.0"
+  }
+}
