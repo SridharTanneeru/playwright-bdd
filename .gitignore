@@ -1,0 +1,50 @@
+# Node modules
+node_modules/
+npm-debug.log*
+
+# Playwright test artifacts
+.features-gen*
+test-results/
+playwright-report/
+*.log
+*.trace
+*.zip
+*.js/
+
+# VSCode config
+.vscode/
+
+# Environment and local config
+.env
+.env.*
+
+# Output builds (if any)
+dist/
+out/
+build/
+
+# OS-specific
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# Jest/coverage (if applicable)
+coverage/
+
+# IDEs
+.idea/
+*.iml
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Yarn/PNPM
+.yarn/
+.pnpm-debug.log
+
+# Optional: ignore all screenshots/videos if you capture them
+screenshots/
+videos/

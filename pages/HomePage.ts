@@ -26,11 +26,19 @@ export class HomePage {
     }
 
     async navigateToFacility(facilityName: string): Promise<void> {
-        await this.page.locator(`//div[contains(text(),"${facilityName}")]`).click();
-      }
+        // Wait for the page to be ready
+        await this.page.waitForLoadState('networkidle');
+        
+        // Click on the facility link in the breadcrumb
+        const facilityLink = this.page.locator('.mat-mdc-card-title .title', { hasText: facilityName }).first();
+        await facilityLink.waitFor({ state: 'visible', timeout: 10000 });
+        await facilityLink.click();
+        
+        // Wait for navigation to complete
+        await this.page.waitForLoadState('networkidle');
+    }
 
     async createFloor(name: string, prefix: string, description = 'test description'): Promise<void> {
-        // await this.page.locator(`//div[contains(text(),'C1')]`).click()
         await this.page.locator(`div.floor .floor-header .add-card`).click();
 
         await this.page.fill('[placeholder="Name"]', name);
@@ -38,8 +46,7 @@ export class HomePage {
         await this.page.fill('[placeholder="Description"]', description);
         await this.page.click('button:has-text("Save")');
 
-        // const floorMessage = await this.waitForFloorAddedMessage('Level 99', 'L99');
-        // expect(floorMessage).toBeTruthy();
+
     }
 
     async verifyFloorAddedEvent(name: string, prefix: string): Promise<void> {

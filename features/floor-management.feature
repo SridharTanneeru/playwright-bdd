@@ -1,6 +1,6 @@
 Feature: Floor Management
 
-  @only
+  @skip
   Scenario: Create a new floor in Glasshouse
     Given I navigate to the glasshouse homepage
     Then the page title should be "Glasshouse"

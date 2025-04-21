@@ -8,7 +8,6 @@ export class FloorPage {
   
     readonly page: Page;
 
-
     constructor(page: Page) {
         this.page = page;
     }

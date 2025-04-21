@@ -19,10 +19,14 @@
       "@util/*": ["util/*"], 
       "@fixtures/*": ["fixtures/*"], 
       "@data/*": ["testdata/*"], 
-      "@env/*": ["environmentSettings/*"] 
+      "@env/*": ["environmentSettings/*"] ,
+      "@steps/*": ["steps/*"],
+      "@steps/api/*": ["steps/api/*"],
+      "@steps/ui/*": ["steps/ui/*"],
+      "@steps/common/*": ["steps/common/*"]
     } 
   }, 
-   "include": ["**/*.ts", "**/*.feature"], 
+   "include": ["**/*.ts", "**/*.feature", "**/*.steps.ts", "utils/**/*.ts"], 
    "exclude": ["node_modules"] 
 }
  
